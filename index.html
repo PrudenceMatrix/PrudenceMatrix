@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1017">
+    <meta name="description" content="PrudenceMatrix — cybersecurity, network engineering, software development, and AI projects.">
+    <title>PrudenceMatrix — Technical Portfolio</title>
+    <link rel="stylesheet" href="portfolio/styles.css">
+    <script src="portfolio/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="PrudenceMatrix home">
+        <span class="wordmark-mark" aria-hidden="true">P</span>
+        <span>Prudence<span class="accent">Matrix</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero page-width" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Technology · Security · Engineering</p>
+          <h1 id="hero-title">PrudenceMatrix</h1>
+          <p id="hero-title-line" class="hero-title-line">Cybersecurity Analyst · Network Engineer · Software Developer · AI &amp; Machine Learning Enthusiast</p>
+          <p id="hero-intro" class="hero-intro">Building, testing, and securing practical technology solutions.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↘</span></a>
+            <a class="button button-secondary" id="cv-link" hidden>Download CV</a>
+          </div>
+          <div id="hero-links" class="link-row" aria-label="Professional links"></div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit-core"><span>PM</span><i></i></div>
+          <span class="orbit-label label-top">BUILD</span>
+          <span class="orbit-label label-right">SECURE</span>
+          <span class="orbit-label label-bottom">IMPROVE</span>
+          <span class="orbit-label label-left">EXPLORE</span>
+        </div>
+        <div class="hero-footnote"><span>01</span><span>Curiosity, applied with purpose.</span></div>
+      </section>
+
+      <section class="stats-strip page-width" aria-label="GitHub public statistics">
+        <div class="stats-heading"><span class="eyebrow">PUBLIC GITHUB DATA</span><p>Live repository snapshot</p></div>
+        <div id="stats-grid" class="stats-grid" aria-live="polite">
+          <p class="loading-message">Loading public profile data…</p>
+        </div>
+      </section>
+
+      <section class="section page-width about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / PROFILE</p>
+          <h2 id="about-title">A practical approach<br>to technology.</h2>
+        </div>
+        <div class="about-content">
+          <p id="about-copy"></p>
+          <p class="muted-copy">Explore the public work below. Repository metadata and statistics are refreshed from GitHub; manually configured project details are shown only when approved for public presentation.</p>
+          <div id="technology-list" class="technology-list" aria-label="Technology stack"></div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="page-width">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">02 / CAPABILITIES</p>
+              <h2 id="skills-title">Areas of focus</h2>
+            </div>
+            <p class="section-note">A configurable snapshot of technical interests and tools.</p>
+          </div>
+          <div id="skills-grid" class="skills-grid"></div>
+        </div>
+      </section>
+
+      <section class="section page-width featured-section" aria-labelledby="featured-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">03 / SELECTED WORK</p>
+            <h2 id="featured-title">Featured projects</h2>
+          </div>
+          <a class="text-link" href="#projects">Browse all projects <span aria-hidden="true">↗</span></a>
+        </div>
+        <div id="featured-projects" class="project-grid"></div>
+      </section>
+
+      <section class="section explorer-section" id="projects" aria-labelledby="projects-title">
+        <div class="page-width">
+          <div class="section-heading section-heading-row">
+            <div>
+              <p class="eyebrow">04 / REPOSITORY EXPLORER</p>
+              <h2 id="projects-title">Find a project</h2>
+            </div>
+            <p id="project-count" class="section-note" aria-live="polite"></p>
+          </div>
+          <div class="filters" role="search" aria-label="Filter projects">
+            <label class="search-field">
+              <span class="visually-hidden">Search projects</span>
+              <span aria-hidden="true">⌕</span>
+              <input id="project-search" type="search" placeholder="Search projects, topics, technologies…" autocomplete="off">
+            </label>
+            <label>
+              <span class="visually-hidden">Filter by category</span>
+              <select id="category-filter"><option value="">All categories</option></select>
+            </label>
+            <label>
+              <span class="visually-hidden">Filter by technology</span>
+              <select id="technology-filter"><option value="">All technologies</option></select>
+            </label>
+            <label>
+              <span class="visually-hidden">Sort projects</span>
+              <select id="sort-projects">
+                <option value="updated">Recently updated</option>
+                <option value="stars">Most stars</option>
+                <option value="name">Name</option>
+              </select>
+            </label>
+          </div>
+          <div id="project-list" class="project-grid"></div>
+          <p id="empty-results" class="empty-message" hidden>No projects match these filters.</p>
+        </div>
+      </section>
+
+      <section class="section page-width practical-section" aria-labelledby="practical-title">
+        <div class="section-heading section-heading-row">
+          <div>
+            <p class="eyebrow">05 / HANDS-ON WORK</p>
+            <h2 id="practical-title">Labs &amp; practical work</h2>
+          </div>
+          <p class="section-note">Project evidence appears only when a public link is configured.</p>
+        </div>
+        <div id="practical-projects" class="project-grid"></div>
+        <p id="practical-empty" class="empty-message" hidden>Practical work is listed with the project categories above.</p>
+      </section>
+
+      <section class="section awards-section" aria-labelledby="awards-title">
+        <div class="page-width awards-inner">
+          <div>
+            <p class="eyebrow">06 / RECOGNITION</p>
+            <h2 id="awards-title">Achievements &amp; certifications</h2>
+          </div>
+          <div id="achievements" class="achievement-list"></div>
+        </div>
+      </section>
+
+      <section class="contact-section page-width" id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">07 / CONNECT</p>
+        <h2 id="contact-title">Let’s build something<br><span class="accent">worth securing.</span></h2>
+        <div id="contact-links" class="link-row"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer page-width">
+      <span>© <span id="current-year"></span> PrudenceMatrix</span>
+      <span>Build. Test. Secure. Improve.</span>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+    <div id="load-error" class="load-error" role="alert" hidden></div>
+  </body>
+</html>

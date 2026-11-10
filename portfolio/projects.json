@@ -1,0 +1,32 @@
+{
+  "mandate-agent": {
+    "title": "AI Shopping Agent & Payment Security System",
+    "category": "AI & Machine Learning",
+    "featured": true,
+    "description": "An AI-driven shopping agent with payment safeguards, security testing and audit capabilities."
+  },
+  "mediroza-hospital-pentesti-final-week4": {
+    "title": "Web Application Security Assessment",
+    "category": "Cybersecurity",
+    "featured": true,
+    "description": "Authorized security assessment with documented findings, evidence and remediation analysis."
+  },
+  "network-footprinting-assessment": {
+    "title": "Network Footprinting & Reconnaissance Assessment",
+    "category": "Cybersecurity",
+    "featured": true,
+    "description": "A practical assessment covering reconnaissance and information gathering techniques."
+  },
+  "iosss-student-placement-system": {
+    "title": "Student Placement Management System",
+    "category": "Software Development",
+    "featured": true,
+    "description": "A PHP and database system for managing student school placement."
+  },
+  "networkwalks-cybersecurity-ctf-writeups": {
+    "title": "Cybersecurity Labs & CTF Writeups",
+    "category": "Cybersecurity",
+    "featured": true,
+    "description": "Documented hands-on cybersecurity labs and challenge writeups."
+  }
+}

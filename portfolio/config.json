@@ -1,0 +1,91 @@
+{
+  "username": "PrudenceMatrix",
+  "profile": {
+    "name": "PrudenceMatrix",
+    "title": "Cybersecurity Analyst | Network Engineer | Software Developer | AI & Machine Learning Enthusiast",
+    "intro": "Building, testing, and securing practical technology solutions.",
+    "about": "I focus on practical work across cybersecurity, network engineering, software development, web technologies, and artificial intelligence. This portfolio brings together public repositories and project details that are explicitly configured for public presentation.",
+    "portfolio_url": "",
+    "cv_url": "",
+    "email": "",
+    "links": {
+      "GitHub": "https://github.com/PrudenceMatrix"
+    }
+  },
+  "skills": {
+    "Cybersecurity": [
+      "Penetration Testing",
+      "Vulnerability Assessment",
+      "Network Reconnaissance",
+      "Security Analysis",
+      "Web Application Security",
+      "Password Security Testing",
+      "Linux Security"
+    ],
+    "Networking": [
+      "TCP/IP",
+      "Network Scanning",
+      "Network Troubleshooting",
+      "Network Security"
+    ],
+    "Programming": [
+      "Python",
+      "Java",
+      "VB.NET",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "Web Development": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "Next.js"
+    ],
+    "Databases": [
+      "PostgreSQL",
+      "MariaDB",
+      "SQL"
+    ],
+    "Artificial Intelligence & Machine Learning": [
+      "Machine Learning",
+      "AI Development",
+      "Data Processing",
+      "Model Development"
+    ]
+  },
+  "technology_stack": [
+    "Linux",
+    "Git",
+    "Wazuh",
+    "Splunk",
+    "Sysmon",
+    "scikit-learn",
+    "PHP"
+  ],
+  "achievements": [],
+  "manual_projects": [],
+  "new_badge_days": 14,
+  "include_forks": true,
+  "include_archived": true,
+  "exclude_repositories": [],
+  "initialize_baseline": false,
+
+  "categories": {
+    "Cybersecurity": [
+      "security", "cyber", "pentest", "footprint",
+      "ctf", "soc", "nmap", "enumeration"
+    ],
+    "Network Engineering": [
+      "network", "networking", "routing"
+    ],
+    "AI & Machine Learning": [
+      "ai", "machine", "prediction", "agent",
+      "recognition", "intelligence"
+    ],
+    "Software Development": [
+      "java", "php", "web", "system",
+      "manager", "placement", "contact"
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "mandate-agent": {
+    "first_seen": "2026-10-26T09:38:04.285345+00:00",
+    "repository_id": 1438469236
+  },
+  "CodeAlpha_CreditScoringModel": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1414198054
+  },
+  "CodeAlpha_DiseasePredictionModel": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1420599299
+  },
+  "CodeAlpha_HandwrittenCharacterRecognition": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1420640274
+  },
+  "h4cker": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1238098640
+  },
+  "iosss-student-placement-system": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1416710353
+  },
+  "JAVA_Simple_Casino_Game": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1161662657
+  },
+  "mediroza-hospital-pentesti-final-week4": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1396514908
+  },
+  "my-portfolio": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1181636129
+  },
+  "network-footprinting-assessment": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1370553707
+  },
+  "NETWORKWALKS-B082-WK1-PM1-CYBERSECURITY-LAB-SETUP": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1359928206
+  },
+  "networkwalks-cybersecurity-ctf-writeups": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1382005951
+  },
+  "Network_Enumeration_With_Nmap": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1234018000
+  },
+  "Personal-Contact-Manager": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1109038318
+  },
+  "soc-level-1-analyst": {
+    "first_seen": "2026-11-10T14:29:08.783081+00:00",
+    "baseline": true,
+    "repository_id": 1431455446
+  },
+  "PrudenceMatrix-": {
+    "first_seen": "2026-11-10T15:10:55.846124+00:00",
+    "baseline": false,
+    "repository_id": 1452441827
+  }
+}
