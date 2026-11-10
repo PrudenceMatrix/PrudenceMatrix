@@ -1,9 +1,9 @@
 {
   "profile": {
     "name": "PrudenceMatrix",
-    "title": "Cybersecurity Analyst | Network Engineer | Software Developer | AI & Machine Learning Enthusiast",
-    "intro": "Building, testing, and securing practical technology solutions.",
-    "about": "I focus on practical work across cybersecurity, network engineering, software development, web technologies, and artificial intelligence. This portfolio brings together public repositories and project details that are explicitly configured for public presentation.",
+    "title": "Cybersecurity | Network Security | Linux & Networking",
+    "intro": "Securing systems, hardening Linux, and understanding networks from the packet up.",
+    "about": "Cybersecurity and network security are my primary focus, with hands-on work in Linux, network reconnaissance, security operations, and defensive testing. I also build web projects and explore AI and machine learning, with databases as a supporting skill.",
     "portfolio_url": null,
     "cv_url": null,
     "email": "",
@@ -15,24 +15,25 @@
     "Cybersecurity": [
       "Penetration Testing",
       "Vulnerability Assessment",
-      "Network Reconnaissance",
       "Security Analysis",
       "Web Application Security",
       "Password Security Testing",
-      "Linux Security"
+      "Linux Security",
+      "Security Operations"
     ],
-    "Networking": [
+    "Network Security & Networking": [
+      "Network Security",
+      "Network Reconnaissance",
       "TCP/IP",
       "Network Scanning",
       "Network Troubleshooting",
-      "Network Security"
+      "Nmap"
     ],
-    "Programming": [
-      "Python",
-      "Java",
-      "VB.NET",
-      "JavaScript",
-      "TypeScript"
+    "Linux & Systems": [
+      "Linux",
+      "Kali Linux",
+      "System Hardening",
+      "Shell"
     ],
     "Web Development": [
       "HTML",
@@ -41,24 +42,34 @@
       "Node.js",
       "Next.js"
     ],
+    "AI & Machine Learning": [
+      "Machine Learning",
+      "AI Development",
+      "Data Processing",
+      "Model Development"
+    ],
     "Databases": [
       "PostgreSQL",
       "MariaDB",
       "SQL"
     ],
-    "Artificial Intelligence & Machine Learning": [
-      "Machine Learning",
-      "AI Development",
-      "Data Processing",
-      "Model Development"
+    "Programming": [
+      "Python",
+      "Java",
+      "VB.NET",
+      "JavaScript",
+      "TypeScript"
     ]
   },
   "technology_stack": [
     "Linux",
-    "Git",
+    "Kali Linux",
     "Wazuh",
     "Splunk",
     "Sysmon",
+    "Nmap",
+    "TCP/IP",
+    "Git",
     "scikit-learn",
     "PHP",
     "Python",
@@ -74,45 +85,16 @@
     "Makefile"
   ],
   "category_order": [
-    "Network Engineering",
     "Cybersecurity & Security Operations",
-    "AI & Machine Learning",
+    "Network Engineering",
     "Web Development",
+    "AI & Machine Learning",
+    "Databases",
     "Software Development",
     "Other Projects"
   ],
   "achievements": [],
   "projects": [
-    {
-      "id": "public:1438469236",
-      "name": "mandate-agent",
-      "title": "AI Shopping Agent & Payment Security System",
-      "description": "An AI-driven shopping agent with payment safeguards, security testing and audit capabilities.",
-      "category": "AI & Machine Learning",
-      "visibility": "public",
-      "repository_url": "https://github.com/PrudenceMatrix/mandate-agent",
-      "live_demo": null,
-      "screenshot": null,
-      "readme_url": "https://github.com/PrudenceMatrix/mandate-agent/blob/main/README.md",
-      "featured": true,
-      "technologies": [
-        "HTML",
-        "JavaScript",
-        "Python"
-      ],
-      "language": "Python",
-      "topics": [],
-      "stars": 0,
-      "forks": 0,
-      "created_at": "2026-10-29T13:36:51Z",
-      "updated_at": "2026-11-01T09:45:48Z",
-      "is_new": false,
-      "is_fork": false,
-      "archived": false,
-      "is_empty": false,
-      "status": "",
-      "related_group": ""
-    },
     {
       "id": "public:1382005951",
       "name": "networkwalks-cybersecurity-ctf-writeups",
@@ -214,37 +196,6 @@
       "related_group": ""
     },
     {
-      "id": "public:1416710353",
-      "name": "iosss-student-placement-system",
-      "title": "Student Placement Management System",
-      "description": "A PHP and database system for managing student school placement.",
-      "category": "Web Development",
-      "visibility": "public",
-      "repository_url": "https://github.com/PrudenceMatrix/iosss-student-placement-system",
-      "live_demo": null,
-      "screenshot": null,
-      "readme_url": "https://github.com/PrudenceMatrix/iosss-student-placement-system/blob/main/README.md",
-      "featured": true,
-      "technologies": [
-        "CSS",
-        "HTML",
-        "JavaScript",
-        "PHP"
-      ],
-      "language": "PHP",
-      "topics": [],
-      "stars": 1,
-      "forks": 0,
-      "created_at": "2026-10-13T08:33:15Z",
-      "updated_at": "2026-10-13T09:50:47Z",
-      "is_new": false,
-      "is_fork": false,
-      "archived": false,
-      "is_empty": false,
-      "status": "",
-      "related_group": ""
-    },
-    {
       "id": "public:1396514908",
       "name": "mediroza-hospital-pentesti-final-week4",
       "title": "Web Application Security Assessment",
@@ -263,6 +214,36 @@
       "forks": 0,
       "created_at": "2026-09-29T19:58:10Z",
       "updated_at": "2026-09-29T20:57:19Z",
+      "is_new": false,
+      "is_fork": false,
+      "archived": false,
+      "is_empty": false,
+      "status": "",
+      "related_group": ""
+    },
+    {
+      "id": "public:1438469236",
+      "name": "mandate-agent",
+      "title": "AI Shopping Agent & Payment Security System",
+      "description": "An AI-driven shopping agent with payment safeguards, security testing and audit capabilities.",
+      "category": "AI & Machine Learning",
+      "visibility": "public",
+      "repository_url": "https://github.com/PrudenceMatrix/mandate-agent",
+      "live_demo": null,
+      "screenshot": null,
+      "readme_url": "https://github.com/PrudenceMatrix/mandate-agent/blob/main/README.md",
+      "featured": false,
+      "technologies": [
+        "HTML",
+        "JavaScript",
+        "Python"
+      ],
+      "language": "Python",
+      "topics": [],
+      "stars": 0,
+      "forks": 0,
+      "created_at": "2026-10-29T13:36:51Z",
+      "updated_at": "2026-11-01T09:45:48Z",
       "is_new": false,
       "is_fork": false,
       "archived": false,
@@ -551,8 +532,39 @@
       "stars": 1,
       "forks": 0,
       "created_at": "2026-11-10T09:16:39Z",
-      "updated_at": "2026-11-10T15:51:39Z",
+      "updated_at": "2026-11-10T16:42:42Z",
       "is_new": true,
+      "is_fork": false,
+      "archived": false,
+      "is_empty": false,
+      "status": "",
+      "related_group": ""
+    },
+    {
+      "id": "public:1416710353",
+      "name": "iosss-student-placement-system",
+      "title": "Student Placement Management System",
+      "description": "A PHP and database system for managing student school placement.",
+      "category": "Web Development",
+      "visibility": "public",
+      "repository_url": "https://github.com/PrudenceMatrix/iosss-student-placement-system",
+      "live_demo": null,
+      "screenshot": null,
+      "readme_url": "https://github.com/PrudenceMatrix/iosss-student-placement-system/blob/main/README.md",
+      "featured": false,
+      "technologies": [
+        "CSS",
+        "HTML",
+        "JavaScript",
+        "PHP"
+      ],
+      "language": "PHP",
+      "topics": [],
+      "stars": 1,
+      "forks": 0,
+      "created_at": "2026-10-13T08:33:15Z",
+      "updated_at": "2026-10-13T09:50:47Z",
+      "is_new": false,
       "is_fork": false,
       "archived": false,
       "is_empty": false,
@@ -567,7 +579,7 @@
     "public_stars": 12,
     "public_forks": 0,
     "languages": {
-      "Python": 5743842,
+      "Python": 5744720,
       "Jupyter Notebook": 525704,
       "PHP": 142119,
       "CSS": 54417,

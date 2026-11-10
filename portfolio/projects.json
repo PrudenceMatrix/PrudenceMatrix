@@ -2,7 +2,7 @@
   "mandate-agent": {
     "title": "AI Shopping Agent & Payment Security System",
     "category": "AI & Machine Learning",
-    "featured": true,
+    "featured": false,
     "description": "An AI-driven shopping agent with payment safeguards, security testing and audit capabilities."
   },
   "CodeAlpha_CreditScoringModel": {
@@ -35,7 +35,7 @@
   "iosss-student-placement-system": {
     "title": "Student Placement Management System",
     "category": "Web Development",
-    "featured": true,
+    "featured": false,
     "description": "A PHP and database system for managing student school placement."
   },
   "networkwalks-cybersecurity-ctf-writeups": {

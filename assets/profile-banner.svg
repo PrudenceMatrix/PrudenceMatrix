@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-labelledby="title description">
   <title id="title">PrudenceMatrix technical profile banner</title>
-  <desc id="description">A solid blue and green banner for cybersecurity, networks, software, and AI.</desc>
+  <desc id="description">A vivid electric-blue cybersecurity banner with a network map and security motifs.</desc>
   <defs>
     <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.6" fill="#d7f5ef" opacity="0.18"/>
+      <circle cx="2" cy="2" r="1.6" fill="#67e8f9" opacity="0.32"/>
     </pattern>
   </defs>
-  <rect width="1600" height="360" rx="22" fill="#0b1220"/>
-  <path d="M1080 0h520v360h-662c99-61 155-135 174-219 12-55 2-102-32-141Z" fill="#121d2d"/>
-  <path d="M1262 0h338v360h-425c82-77 115-153 110-226-3-53-16-97-23-134Z" fill="#0f766e"/>
-  <path d="M1183 360c111-91 169-190 165-292-1-26-5-49-12-68" fill="none" stroke="#d7f5ef" stroke-width="2" opacity="0.7"/>
-  <path d="M1020 0c52 55 74 119 66 192-6 55-29 111-68 168" fill="none" stroke="#7dd3fc" stroke-width="2" opacity="0.7"/>
-  <rect x="1015" y="46" width="520" height="268" fill="url(#dots)" opacity="0.9"/>
-  <g fill="none" stroke="#f8fbff" stroke-width="2" opacity="0.8">
+  <rect width="1600" height="360" rx="22" fill="#071426"/>
+  <path d="M1080 0h520v360h-662c99-61 155-135 174-219 12-55 2-102-32-141Z" fill="#0b2342"/>
+  <path d="M1262 0h338v360h-425c82-77 115-153 110-226-3-53-16-97-23-134Z" fill="#0756d8"/>
+  <path d="M1183 360c111-91 169-190 165-292-1-26-5-49-12-68" fill="none" stroke="#a5f3fc" stroke-width="3" opacity="0.9"/>
+  <path d="M1020 0c52 55 74 119 66 192-6 55-29 111-68 168" fill="none" stroke="#38bdf8" stroke-width="3" opacity="0.9"/>
+  <rect x="1015" y="46" width="520" height="268" fill="url(#dots)" opacity="0.95"/>
+  <g fill="none" stroke="#effaff" stroke-width="2.5" opacity="0.9">
     <path d="M1170 98h90l48 48h76"/>
     <path d="M1135 214h78l38-38h76l34 34h94"/>
     <path d="M1242 275h64l34-34h88"/>
     <path d="M1398 118v42l-30 30"/>
   </g>
-  <g fill="#f8fbff" opacity="0.9">
+  <g fill="#effaff" opacity="0.95">
     <circle cx="1170" cy="98" r="5"/>
     <circle cx="1384" cy="146" r="5"/>
     <circle cx="1135" cy="214" r="5"/>
@@ -27,9 +27,9 @@
     <circle cx="1242" cy="275" r="5"/>
     <circle cx="1428" cy="241" r="5"/>
   </g>
-  <text x="92" y="116" fill="#7dd3fc" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="3.2">CYBERSECURITY  ·  NETWORKS  ·  SOFTWARE  ·  AI</text>
-  <text x="88" y="203" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.7">Build with purpose.</text>
-  <text x="92" y="252" fill="#dbeafe" font-family="Arial, Helvetica, sans-serif" font-size="21">Practical technology. Thoughtful security.</text>
-  <rect x="92" y="290" width="76" height="5" rx="2.5" fill="#2563eb"/>
-  <rect x="174" y="290" width="42" height="5" rx="2.5" fill="#10b981"/>
+  <text x="92" y="116" fill="#67e8f9" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" letter-spacing="3.2">CYBERSECURITY  ·  NETWORK DEFENSE  ·  LINUX</text>
+  <text x="88" y="203" fill="#f8fbff" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="-1.7">Think secure. Build resilient.</text>
+  <text x="92" y="252" fill="#cfe8ff" font-family="Arial, Helvetica, sans-serif" font-size="21">Linux hardening · Network defense · Security operations</text>
+  <rect x="92" y="290" width="124" height="6" rx="3" fill="#38bdf8"/>
+  <rect x="222" y="290" width="64" height="6" rx="3" fill="#2563eb"/>
 </svg>

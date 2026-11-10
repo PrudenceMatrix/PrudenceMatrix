@@ -9,10 +9,12 @@ The repository root `README.md` is designed to be the GitHub profile page. The g
 
 ## Edit profile content
 
-- `config.json`: title, biography, skills, technology stack, links, category ordering, and portfolio options.
+- `config.json`: title, biography, priority-ordered skills, technology stack, links, category ordering, and portfolio options.
 - `projects.json`: curated project names, descriptions, categories, and featured choices.
 
 Only add contact details and links approved for public display. Public repositories are discovered from GitHub; private repositories are not included.
+
+The root profile README is the GitHub-facing presentation. Its marked sections are regenerated, so keep every marker pair intact when changing the layout. The blue profile banner is maintained in `assets/profile-banner.svg`.
 
 ## Generate and verify
 

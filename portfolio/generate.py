@@ -462,9 +462,18 @@ def build_portfolio_data(
 
 def featured_rows(data: dict) -> str:
     output = ["| Project | Area | What it demonstrates |", "|---|---|---|"]
-    for project in data["projects"]:
-        if not project.get("featured"):
-            continue
+    category_order = {
+        category: index
+        for index, category in enumerate(data.get("category_order", []))
+    }
+    featured_projects = sorted(
+        (project for project in data["projects"] if project.get("featured")),
+        key=lambda project: (
+            category_order.get(project.get("category"), len(category_order)),
+            project.get("title", "").casefold(),
+        ),
+    )
+    for project in featured_projects:
         title = _plain_markdown(project.get("title", "Project"))
         url = project.get("repository_url")
         if url:

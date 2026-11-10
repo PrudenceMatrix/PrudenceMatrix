@@ -10,6 +10,7 @@ from portfolio.generate import (
     build_portfolio_data,
     category_for,
     discover,
+    featured_rows,
     repository_rows,
     skills_rows,
     update_repository_state,
@@ -268,6 +269,34 @@ class PortfolioGeneratorTests(unittest.TestCase):
         self.assertLess(
             rendered.index("Cybersecurity & Security Operations"),
             rendered.index("Web Development"),
+        )
+
+    def test_featured_projects_follow_configured_category_priority(self):
+        rendered = featured_rows(
+            {
+                "category_order": ["Cybersecurity", "Network Engineering"],
+                "projects": [
+                    {
+                        "title": "Network assessment",
+                        "category": "Network Engineering",
+                        "featured": True,
+                        "description": "Network project.",
+                        "visibility": "public",
+                    },
+                    {
+                        "title": "Security lab",
+                        "category": "Cybersecurity",
+                        "featured": True,
+                        "description": "Security project.",
+                        "visibility": "public",
+                    },
+                ],
+            }
+        )
+
+        self.assertLess(
+            rendered.index("Security lab"),
+            rendered.index("Network assessment"),
         )
 
     def test_skills_render_as_grouped_plain_labels_without_proficiency_scores(self):

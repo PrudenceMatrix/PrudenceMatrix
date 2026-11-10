@@ -2,9 +2,9 @@
   "username": "PrudenceMatrix",
   "profile": {
     "name": "PrudenceMatrix",
-    "title": "Cybersecurity Analyst | Network Engineer | Software Developer | AI & Machine Learning Enthusiast",
-    "intro": "Building, testing, and securing practical technology solutions.",
-    "about": "I focus on practical work across cybersecurity, network engineering, software development, web technologies, and artificial intelligence. This portfolio brings together public repositories and project details that are explicitly configured for public presentation.",
+    "title": "Cybersecurity | Network Security | Linux & Networking",
+    "intro": "Securing systems, hardening Linux, and understanding networks from the packet up.",
+    "about": "Cybersecurity and network security are my primary focus, with hands-on work in Linux, network reconnaissance, security operations, and defensive testing. I also build web projects and explore AI and machine learning, with databases as a supporting skill.",
     "portfolio_url": "",
     "cv_url": "",
     "email": "",
@@ -16,24 +16,25 @@
     "Cybersecurity": [
       "Penetration Testing",
       "Vulnerability Assessment",
-      "Network Reconnaissance",
       "Security Analysis",
       "Web Application Security",
       "Password Security Testing",
-      "Linux Security"
+      "Linux Security",
+      "Security Operations"
     ],
-    "Networking": [
+    "Network Security & Networking": [
+      "Network Security",
+      "Network Reconnaissance",
       "TCP/IP",
       "Network Scanning",
       "Network Troubleshooting",
-      "Network Security"
+      "Nmap"
     ],
-    "Programming": [
-      "Python",
-      "Java",
-      "VB.NET",
-      "JavaScript",
-      "TypeScript"
+    "Linux & Systems": [
+      "Linux",
+      "Kali Linux",
+      "System Hardening",
+      "Shell"
     ],
     "Web Development": [
       "HTML",
@@ -42,24 +43,34 @@
       "Node.js",
       "Next.js"
     ],
+    "AI & Machine Learning": [
+      "Machine Learning",
+      "AI Development",
+      "Data Processing",
+      "Model Development"
+    ],
     "Databases": [
       "PostgreSQL",
       "MariaDB",
       "SQL"
     ],
-    "Artificial Intelligence & Machine Learning": [
-      "Machine Learning",
-      "AI Development",
-      "Data Processing",
-      "Model Development"
+    "Programming": [
+      "Python",
+      "Java",
+      "VB.NET",
+      "JavaScript",
+      "TypeScript"
     ]
   },
   "technology_stack": [
     "Linux",
-    "Git",
+    "Kali Linux",
     "Wazuh",
     "Splunk",
     "Sysmon",
+    "Nmap",
+    "TCP/IP",
+    "Git",
     "scikit-learn",
     "PHP"
   ],
@@ -71,10 +82,11 @@
   "exclude_repositories": [],
   "initialize_baseline": false,
   "category_order": [
-    "Network Engineering",
     "Cybersecurity & Security Operations",
-    "AI & Machine Learning",
+    "Network Engineering",
     "Web Development",
+    "AI & Machine Learning",
+    "Databases",
     "Software Development",
     "Other Projects"
   ],
