@@ -71,21 +71,31 @@
   "exclude_repositories": [],
   "initialize_baseline": false,
 
+  "category_order": [
+    "Network Engineering",
+    "Cybersecurity & Security Operations",
+    "AI & Machine Learning",
+    "Web Development",
+    "Software Development",
+    "Other Projects"
+  ],
   "categories": {
-    "Cybersecurity": [
-      "security", "cyber", "pentest", "footprint",
-      "ctf", "soc", "nmap", "enumeration"
-    ],
     "Network Engineering": [
-      "network", "networking", "routing"
+      "network", "networking", "routing", "nmap", "footprint"
+    ],
+    "Cybersecurity & Security Operations": [
+      "security", "cyber", "pentest", "ctf", "soc", "vulnerability",
+      "reconnaissance"
     ],
     "AI & Machine Learning": [
       "ai", "machine", "prediction", "agent",
       "recognition", "intelligence"
     ],
+    "Web Development": [
+      "web", "portfolio", "frontend", "html", "css"
+    ],
     "Software Development": [
-      "java", "php", "web", "system",
-      "manager", "placement", "contact"
+      "java", "php", "system", "manager", "placement", "contact"
     ]
   }
 }

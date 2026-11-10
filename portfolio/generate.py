@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from html import escape
 import json
 import re
 import subprocess
@@ -25,6 +26,16 @@ STACK_START = "<!-- TECHNOLOGY_STACK_START -->"
 STACK_END = "<!-- TECHNOLOGY_STACK_END -->"
 LINKS_START = "<!-- PROFILE_LINKS_START -->"
 LINKS_END = "<!-- PROFILE_LINKS_END -->"
+SKILLS_START = "<!-- SKILLS_START -->"
+SKILLS_END = "<!-- SKILLS_END -->"
+NAME_START = "<!-- PROFILE_NAME_START -->"
+NAME_END = "<!-- PROFILE_NAME_END -->"
+TITLE_START = "<!-- PROFILE_TITLE_START -->"
+TITLE_END = "<!-- PROFILE_TITLE_END -->"
+INTRO_START = "<!-- PROFILE_INTRO_START -->"
+INTRO_END = "<!-- PROFILE_INTRO_END -->"
+ABOUT_START = "<!-- ABOUT_START -->"
+ABOUT_END = "<!-- ABOUT_END -->"
 
 
 class GitHubCommandError(RuntimeError):
@@ -430,6 +441,7 @@ def build_portfolio_data(
                 ]
             )
         ),
+        "category_order": config.get("category_order", []),
         "achievements": config.get("achievements", []),
         "projects": all_projects,
         "stats": {
@@ -471,28 +483,41 @@ def repository_rows(data: dict) -> str:
         if project.get("repository_url"):
             title = _markdown_link(title, project["repository_url"])
         if project.get("is_new"):
-            title += " **NEW**"
+            title += " · **NEW**"
         if project.get("is_fork"):
-            title += " (Fork)"
+            title += " · Fork"
         if project.get("archived"):
-            title += " (Archived)"
+            title += " · Archived"
         description = _plain_markdown(project.get("description", ""))
-        language = _plain_markdown(project.get("language") or "Not specified")
-        updated = (project.get("updated_at") or "")[:10]
-        row = (
-            f"| {title} | {description} | {language} | "
-            f"{project.get('stars', 0)} | {updated} |"
-        )
+        row = f"| {title} | {description} |"
         categories.setdefault(project.get("category", "Other Projects"), []).append(row)
 
+    category_order = data.get("category_order", [])
+    category_names = list(category_order)
+    category_names.extend(
+        sorted(
+            (name for name in categories if name not in category_order),
+            key=str.casefold,
+        )
+    )
+    icons = {
+        "Network Engineering": "🌐",
+        "Cybersecurity & Security Operations": "🛡️",
+        "AI & Machine Learning": "🧠",
+        "Web Development": "🌱",
+        "Software Development": "⚙️",
+        "Other Projects": "📁",
+    }
     output = []
-    for category in sorted(categories, key=str.casefold):
+    for category in category_names:
+        if category not in categories:
+            continue
         output.extend(
             [
-                f"### {_plain_markdown(category)}",
+                f"### {icons.get(category, '📌')} {_plain_markdown(category)}",
                 "",
-                "| Project | Description | Language | Stars | Updated |",
-                "|---|---|---|---:|---|",
+                "| Project | What it covers |",
+                "|---|---|",
                 *categories[category],
                 "",
             ]
@@ -503,22 +528,19 @@ def repository_rows(data: dict) -> str:
 def stats_rows(data: dict) -> str:
     stats = data["stats"]
     output = [
-        "| Public repositories | Followers | Following | Public stars | Public forks |",
-        "|---:|---:|---:|---:|---:|",
-        f"| {stats['public_repositories']} | {stats['followers']} | "
-        f"{stats['following']} | {stats['public_stars']} | {stats['public_forks']} |",
+        "| Public repositories | Followers | Following | Stars across public repositories |",
+        "|:---:|:---:|:---:|:---:|",
+        f"| **{stats['public_repositories']}** | **{stats['followers']}** | "
+        f"**{stats['following']}** | **{stats['public_stars']}** |",
         "",
-        "Language totals are measured from GitHub's repository language API:",
+        "**Languages detected across public repositories:** "
+        + " · ".join(
+            f"`{_plain_markdown(language)}`"
+            for language in list(stats["languages"])[:10]
+        ),
         "",
-        "| Language | Bytes |",
-        "|---|---:|",
+        f"<sub>Public GitHub data · refreshed {data['generated_on']}</sub>",
     ]
-    output.extend(
-        f"| {_plain_markdown(language)} | {size} |"
-        for language, size in list(stats["languages"].items())[:10]
-    )
-    if not stats["languages"]:
-        output.append("| No language data available | — |")
     return "\n".join(output)
 
 
@@ -529,19 +551,54 @@ def stack_rows(data: dict) -> str:
     )
 
 
+def skills_rows(data: dict) -> str:
+    output = ["| Area | Skills & tools |", "|---|---|"]
+    for category, skills in data.get("skills", {}).items():
+        items = " · ".join(f"`{_plain_markdown(skill)}`" for skill in skills)
+        output.append(f"| **{_plain_markdown(category)}** | {items} |")
+    return "\n".join(output)
+
+
+def _replace_html_marker(content: str, start: str, end: str, value: str) -> str:
+    if start not in content or end not in content:
+        raise ValueError(f"Missing README markers: {start}, {end}")
+    before, remaining = content.split(start, 1)
+    _, after = remaining.split(end, 1)
+    return f"{before}{start}{value}{end}{after}"
+
+
 def profile_links(data: dict) -> str:
     links = dict(data["profile"].get("links", {}))
     portfolio_url = data["profile"].get("portfolio_url")
     email = data["profile"].get("email")
     if portfolio_url:
         links["Portfolio"] = portfolio_url
-    rendered = [
-        _markdown_link(_plain_markdown(label), url)
-        for label, url in links.items()
-    ]
+    rendered = []
+    badge_colors = {
+        "github": "2457A6",
+        "linkedin": "176B87",
+        "portfolio": "16806B",
+        "email": "16806B",
+    }
+    for label, url in links.items():
+        action = "View profile" if label.lower() in {"github", "linkedin"} else "Visit website"
+        color = badge_colors.get(label.lower(), "2457A6")
+        badge_label = quote(label, safe="")
+        badge_action = quote(action, safe="")
+        badge = (
+            f"https://img.shields.io/badge/{badge_label}-{badge_action}-{color}"
+            "?style=for-the-badge"
+        )
+        rendered.append(
+            f'<a href="{escape(url, quote=True)}"><img src="{badge}" '
+            f'alt="{escape(label, quote=True)}"></a>'
+        )
     if email:
-        rendered.append(_markdown_link("Email", f"mailto:{email}"))
-    return " · ".join(rendered)
+        rendered.append(
+            f'<a href="mailto:{escape(email, quote=True)}">'
+            '<img src="https://img.shields.io/badge/Email-Contact-16806B?style=for-the-badge" alt="Email"></a>'
+        )
+    return " &nbsp; ".join(rendered)
 
 
 def replace_section(content: str, start: str, end: str, replacement: str) -> str:
@@ -559,10 +616,19 @@ def update_readme(data: dict) -> None:
         (START, END, repository_rows(data)),
         (STATS_START, STATS_END, stats_rows(data)),
         (STACK_START, STACK_END, stack_rows(data)),
+        (SKILLS_START, SKILLS_END, skills_rows(data)),
         (LINKS_START, LINKS_END, profile_links(data)),
     )
     for start, end, replacement in sections:
         readme = replace_section(readme, start, end, replacement)
+    html_sections = (
+        (NAME_START, NAME_END, escape(str(data["profile"].get("name", "")))),
+        (TITLE_START, TITLE_END, escape(str(data["profile"].get("title", "")))),
+        (INTRO_START, INTRO_END, escape(str(data["profile"].get("intro", "")))),
+        (ABOUT_START, ABOUT_END, escape(str(data["profile"].get("about", "")))),
+    )
+    for start, end, replacement in html_sections:
+        readme = _replace_html_marker(readme, start, end, replacement)
     save_text(README, readme)
 
 
@@ -633,7 +699,12 @@ def main() -> None:
             (FEATURE_START, FEATURE_END),
             (STATS_START, STATS_END),
             (STACK_START, STACK_END),
+            (SKILLS_START, SKILLS_END),
             (LINKS_START, LINKS_END),
+            (NAME_START, NAME_END),
+            (TITLE_START, TITLE_END),
+            (INTRO_START, INTRO_END),
+            (ABOUT_START, ABOUT_END),
         ):
             content = README.read_text(encoding="utf-8")
             if start not in content or end not in content:

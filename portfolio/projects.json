@@ -5,28 +5,84 @@
     "featured": true,
     "description": "An AI-driven shopping agent with payment safeguards, security testing and audit capabilities."
   },
+  "CodeAlpha_CreditScoringModel": {
+    "title": "Credit Scoring Model",
+    "category": "AI & Machine Learning",
+    "description": "A Python and scikit-learn project that predicts credit risk from historical financial data."
+  },
+  "CodeAlpha_DiseasePredictionModel": {
+    "title": "Disease Prediction Model",
+    "category": "AI & Machine Learning",
+    "description": "A Python project exploring disease prediction with a machine-learning model."
+  },
+  "CodeAlpha_HandwrittenCharacterRecognition": {
+    "title": "Handwritten Character Recognition",
+    "category": "AI & Machine Learning",
+    "description": "A Python project focused on recognizing handwritten characters."
+  },
   "mediroza-hospital-pentesti-final-week4": {
     "title": "Web Application Security Assessment",
-    "category": "Cybersecurity",
+    "category": "Cybersecurity & Security Operations",
     "featured": true,
     "description": "Authorized security assessment with documented findings, evidence and remediation analysis."
   },
   "network-footprinting-assessment": {
     "title": "Network Footprinting & Reconnaissance Assessment",
-    "category": "Cybersecurity",
+    "category": "Network Engineering",
     "featured": true,
-    "description": "A practical assessment covering reconnaissance and information gathering techniques."
+    "description": "An authorized network reconnaissance assessment using common footprinting and information-gathering techniques."
   },
   "iosss-student-placement-system": {
     "title": "Student Placement Management System",
-    "category": "Software Development",
+    "category": "Web Development",
     "featured": true,
     "description": "A PHP and database system for managing student school placement."
   },
   "networkwalks-cybersecurity-ctf-writeups": {
     "title": "Cybersecurity Labs & CTF Writeups",
-    "category": "Cybersecurity",
+    "category": "Cybersecurity & Security Operations",
     "featured": true,
-    "description": "Documented hands-on cybersecurity labs and challenge writeups."
+    "description": "Documented hands-on cybersecurity labs and challenge write-ups."
+  },
+  "NETWORKWALKS-B082-WK1-PM1-CYBERSECURITY-LAB-SETUP": {
+    "title": "Cybersecurity Lab Setup",
+    "category": "Cybersecurity & Security Operations",
+    "description": "An isolated Kali Linux lab setup for learning security assessment and defensive operations."
+  },
+  "Network_Enumeration_With_Nmap": {
+    "title": "Network Enumeration with Nmap",
+    "category": "Network Engineering",
+    "description": "A practical overview of host discovery, open ports, and service enumeration for authorized security work."
+  },
+  "soc-level-1-analyst": {
+    "title": "SOC Level 1 Analyst Labs",
+    "category": "Cybersecurity & Security Operations",
+    "featured": true,
+    "description": "Hands-on SOC labs covering Wazuh, Splunk, Sysmon, detections, playbooks, and incident reports."
+  },
+  "h4cker": {
+    "title": "h4cker Security Reference (Fork)",
+    "category": "Cybersecurity & Security Operations",
+    "description": "A fork of a broad, community-maintained collection of cybersecurity and ethical hacking references."
+  },
+  "my-portfolio": {
+    "title": "Personal Portfolio",
+    "category": "Web Development",
+    "description": "A personal portfolio website built with TypeScript."
+  },
+  "JAVA_Simple_Casino_Game": {
+    "title": "Java Simple Casino Game",
+    "category": "Software Development",
+    "description": "A small casino game project implemented in Java."
+  },
+  "Personal-Contact-Manager": {
+    "title": "Personal Contact Manager",
+    "category": "Software Development",
+    "description": "A Python application for managing personal contacts."
+  },
+  "PrudenceMatrix-": {
+    "title": "GitHub Portfolio Source",
+    "category": "Other Projects",
+    "description": "Source files and automation for maintaining this GitHub portfolio."
   }
 }

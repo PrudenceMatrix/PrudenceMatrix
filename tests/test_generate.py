@@ -10,6 +10,8 @@ from portfolio.generate import (
     build_portfolio_data,
     category_for,
     discover,
+    repository_rows,
+    skills_rows,
     update_repository_state,
     validate_config,
 )
@@ -190,6 +192,81 @@ class PortfolioGeneratorTests(unittest.TestCase):
                 },
                 {},
             )
+
+    def test_readme_project_catalog_includes_every_public_project_in_configured_order(self):
+        projects = [
+            {
+                "title": "A network project",
+                "description": "Network assessment.",
+                "category": "Network Engineering",
+                "visibility": "public",
+                "repository_url": "https://github.com/example/network",
+                "language": None,
+                "is_new": True,
+            },
+            {
+                "title": "A security project",
+                "description": "Defensive security lab.",
+                "category": "Cybersecurity & Security Operations",
+                "visibility": "public",
+                "repository_url": "https://github.com/example/security",
+                "language": "Python",
+            },
+            {
+                "title": "A web project",
+                "description": "Website project.",
+                "category": "Web Development",
+                "visibility": "public",
+                "repository_url": "https://github.com/example/web",
+                "language": "TypeScript",
+            },
+            {
+                "title": "A private project",
+                "description": "Do not show.",
+                "category": "Other Projects",
+                "visibility": "private",
+            },
+        ]
+        data = {
+            "projects": projects,
+            "category_order": [
+                "Network Engineering",
+                "Cybersecurity & Security Operations",
+                "Web Development",
+            ],
+        }
+
+        rendered = repository_rows(data)
+
+        self.assertIn("A network project", rendered)
+        self.assertIn("**NEW**", rendered)
+        self.assertNotIn("**[A network project]", rendered)
+        self.assertIn("A security project", rendered)
+        self.assertIn("A web project", rendered)
+        self.assertNotIn("A private project", rendered)
+        self.assertLess(
+            rendered.index("Network Engineering"),
+            rendered.index("Cybersecurity & Security Operations"),
+        )
+        self.assertLess(
+            rendered.index("Cybersecurity & Security Operations"),
+            rendered.index("Web Development"),
+        )
+
+    def test_skills_render_as_grouped_plain_labels_without_proficiency_scores(self):
+        rendered = skills_rows(
+            {
+                "skills": {
+                    "Networking": ["TCP/IP", "Network Scanning"],
+                    "Web Development": ["HTML", "CSS"],
+                }
+            }
+        )
+
+        self.assertIn("**Networking**", rendered)
+        self.assertIn("`TCP/IP`", rendered)
+        self.assertIn("**Web Development**", rendered)
+        self.assertNotIn("%", rendered)
 
 
 if __name__ == "__main__":
