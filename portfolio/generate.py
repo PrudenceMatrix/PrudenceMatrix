@@ -172,25 +172,29 @@ def update_repository_state(
     now: datetime,
 ) -> None:
     duration = timedelta(days=max(0, config.get("new_badge_days", 14)))
-    id_to_name = {
-        str(record["repository_id"]): name
-        for name, record in state.items()
-        if record.get("repository_id") is not None
-    }
 
     for repo in repos:
         name = repo["name"]
         repository_id = repo.get("id")
-        previous_name = (
-            id_to_name.get(str(repository_id))
-            if repository_id is not None
-            else None
-        )
         record = state.get(name)
+        stale_names = []
+        if repository_id is not None:
+            stale_names = [
+                key
+                for key, existing in state.items()
+                if key != name and existing.get("repository_id") == repository_id
+            ]
 
-        if record is None and previous_name is not None:
-            record = state.pop(previous_name)
-            state[name] = record
+        if record is None and stale_names:
+            record = state.pop(stale_names[0], None)
+            if record is not None:
+                state[name] = record
+
+        for stale_name in stale_names:
+            if stale_name == name:
+                continue
+            if stale_name != stale_names[0] or record is not None:
+                state.pop(stale_name, None)
 
         if record is None:
             baseline = bool(config.get("initialize_baseline", False))

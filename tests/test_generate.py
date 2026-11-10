@@ -117,6 +117,23 @@ class PortfolioGeneratorTests(unittest.TestCase):
             _new_badge(repo, state["new-name"], NOW, timedelta(days=14))
         )
 
+    def test_renamed_repository_removes_stale_old_name_record_when_new_name_already_exists(self):
+        seen = (NOW - timedelta(days=7)).isoformat()
+        state = {
+            "old-name": {"repository_id": 42, "first_seen": seen, "baseline": False},
+            "new-name": {"repository_id": 42, "first_seen": seen, "baseline": False},
+        }
+        repo = {
+            "id": 42,
+            "name": "new-name",
+            "created_at": (NOW - timedelta(days=3)).isoformat(),
+        }
+
+        update_repository_state([repo], state, {"new_badge_days": 14}, NOW)
+
+        self.assertNotIn("old-name", state)
+        self.assertEqual(state["new-name"]["first_seen"], seen)
+
     def test_category_uses_repository_topics(self):
         repo = {"name": "project-x", "description": None, "topics": ["network-security"]}
         config = {"categories": {"Network Engineering": ["network"]}}
