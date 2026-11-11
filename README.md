@@ -202,7 +202,7 @@ Every public repository is included below, grouped by the kind of work it demons
 <!-- GITHUB_STATS_START -->
 | Public repositories | Followers | Following | Stars across public repositories |
 |:---:|:---:|:---:|:---:|
-| **16** | **4** | **13** | **12** |
+| **16** | **2** | **13** | **12** |
 
 **Languages detected across public repositories:** `Python` · `Jupyter Notebook` · `PHP` · `CSS` · `HTML` · `JavaScript` · `TypeScript` · `Java` · `Shell` · `TSQL`
 
