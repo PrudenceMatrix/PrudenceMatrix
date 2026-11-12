@@ -2,7 +2,7 @@
 
 <div align="center">
 
-# Hi, I'm <span><!-- PROFILE_NAME_START -->PrudenceMatrix<!-- PROFILE_NAME_END --></span> 👋
+# Hi, I'm <span><!-- PROFILE_NAME_START -->Brian Machayo<!-- PROFILE_NAME_END --></span> 👋
 
 ### <!-- PROFILE_TITLE_START -->Cybersecurity | Network Security | Linux &amp; Networking<!-- PROFILE_TITLE_END -->
 
