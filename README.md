@@ -177,7 +177,7 @@ Every public repository is included below, grouped by the kind of work it demons
 | Project | What it covers |
 |---|---|
 | [Personal Portfolio](https://github.com/PrudenceMatrix/my-portfolio) | A personal portfolio website built with TypeScript. |
-| [PrudenceMatrix](https://github.com/PrudenceMatrix/PrudenceMatrix) · **NEW** | GitHub Portfolio  |
+| [PrudenceMatrix](https://github.com/PrudenceMatrix/PrudenceMatrix) | GitHub Portfolio  |
 | [Student Placement Management System](https://github.com/PrudenceMatrix/iosss-student-placement-system) | A PHP and database system for managing student school placement. |
 
 ### 🧠 AI & Machine Learning
