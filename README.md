@@ -206,7 +206,7 @@ Every public repository is included below, grouped by the kind of work it demons
 
 **Languages detected across public repositories:** `Python` · `Jupyter Notebook` · `PHP` · `CSS` · `HTML` · `JavaScript` · `TypeScript` · `Java` · `Shell` · `TSQL`
 
-<sub>Public GitHub data · refreshed 2026-11-27</sub>
+<sub>Public GitHub data · refreshed 2026-11-28</sub>
 <!-- GITHUB_STATS_END -->
 
 ---
